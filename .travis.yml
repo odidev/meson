@@ -1,13 +1,12 @@
-dist: bionic
-group: travis_latest
-
+language: python
+cache: pip
 os: linux
 language: python
 
 matrix:
   include:
     - python: 3.8
-      env: CC=gcc 
+      env:
       arch: arm64
 install:
   - pip install meson ninja
